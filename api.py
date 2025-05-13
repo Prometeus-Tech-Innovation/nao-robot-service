@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from qi_connection import QiConnection, FirstInteraction, QiCloseSession
 from qi_commands import QiAnimatedSpeech, QiListen
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 session = None
 qi_app = None
 
