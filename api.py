@@ -4,7 +4,7 @@ from qi_commands import QiAnimatedSpeech, QiListen
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "https://jano-plataform.vercel.app"}})
 session = None
 qi_app = None
 
